@@ -18,8 +18,9 @@ const todos = [];
 
 function createTodo(call, callback) {
   const todoItem = {
-    id: todos.length + 1,
-    text: call.request.text,
+    a: call.request.b,
+    b: call.request.a,
+    mul: call.request.a * call.request.b,
   };
   todos.push(todoItem);
   callback(null, todoItem);

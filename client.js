@@ -11,8 +11,8 @@ const client = new todoPackage.Todo(
 
 client.createTodo(
   {
-    id: 1,
-    text: "Hello",
+    a: Math.floor(Math.random() * 10 + 1),
+    b: Math.floor(Math.random() * 10 + 1),
   },
   (err, response) => {
     console.log("Received from Server " + JSON.stringify(response));

@@ -3,15 +3,21 @@ syntax = "proto3";
 package todoPackage;
 
 service Todo{
-  rpc createTodo(TodoItem) returns (TodoItem);
+  rpc createTodo(TodoItemInput) returns (TodoItem);
   rpc readTodos(noparams) returns (TodoItems);
 }
 
 message noparams {}
 
 message TodoItem{
-  int32 id = 1;
-  string text = 2;
+  int32 a = 1;
+  int32 b = 2;
+  int32 mul = 3;
+}
+
+message TodoItemInput{
+  int32 a = 1;
+  int32 b = 2;
 }
 
 message TodoItems{
